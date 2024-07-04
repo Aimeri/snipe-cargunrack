@@ -40,8 +40,8 @@ RegisterNetEvent('snipe-cargunrack:server:openGunrack', function(plate)
     local Player = QBCore.Functions.GetPlayer(src)
     if Player then
         exports['qb-inventory']:OpenInventory(src, 'gunrack_car_'..plate, {
-            maxweight = 1000000,
-            slots = 40,
+            maxweight = Config.StashSize,
+            slots = Config.StashSlots,
         })
     end
 end)
