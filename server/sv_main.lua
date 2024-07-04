@@ -2,7 +2,7 @@
 -----------------For support, scripts, and more----------------
 --------------- https://discord.gg/AeCVP2F8h7  -------------
 ---------------------------------------------------------------
-
+QBCore = exports['qb-core']:GetCoreObject()
 function Trim(value)
     if not value then return nil end
     return (string.gsub(value, '^%s*(.-)%s*$', '%1'))
