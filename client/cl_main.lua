@@ -44,8 +44,19 @@ local function OpenGunrack(plate, doProgress)
             return
         end
     end
+    --[[
     if Config.Inventory == "qb" or Config.Inventory == "qs" then
 	TriggerServerEvent('snipe-cargunrack:server:openGunrack', plate)
+    ]]
+    if Config.Inventory == "qb" or Config.Inventory == "qs" then
+	if Config.QBInventory == "old" then
+        	TriggerServerEvent("inventory:server:OpenInventory", "stash", "gunrack_car_"..plate, {
+            	maxweight = Config.StashSize,
+            	slots = Config.StashSlots,
+        	})
+	elseif Config.QBInventory == "new" then
+        	TriggerEvent("inventory:client:SetCurrentStash", "gunrack_car_"..plate)
+	end
     elseif Config.Inventory == "ox" then
         TriggerServerEvent("snipe-cargunrack:server:registerStash","gunrack_car_"..plate, "ox")
         exports.ox_inventory:openInventory("stash", "gunrack_car_"..plate)
