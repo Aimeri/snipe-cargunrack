@@ -44,10 +44,7 @@ local function OpenGunrack(plate, doProgress)
             return
         end
     end
-    --[[
-    if Config.Inventory == "qb" or Config.Inventory == "qs" then
-	TriggerServerEvent('snipe-cargunrack:server:openGunrack', plate)
-    ]]
+
     if Config.Inventory == "qb" or Config.Inventory == "qs" then
 	if Config.QBInventory == "old" then
         	TriggerServerEvent("inventory:server:OpenInventory", "stash", "gunrack_car_"..plate, {
