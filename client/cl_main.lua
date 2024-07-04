@@ -52,7 +52,7 @@ local function OpenGunrack(plate, doProgress)
             	slots = Config.StashSlots,
         	})
 	elseif Config.QBInventory == "new" then
-        	TriggerEvent("inventory:client:SetCurrentStash", "gunrack_car_"..plate)
+        	TriggerServerEvent("snipe-cargunrack:server:openGunrack", "gunrack_car_"..plate)
 	end
     elseif Config.Inventory == "ox" then
         TriggerServerEvent("snipe-cargunrack:server:registerStash","gunrack_car_"..plate, "ox")
