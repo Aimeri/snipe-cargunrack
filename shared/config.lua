@@ -29,7 +29,7 @@ Config.AllowedCarsModel = {
 }
 
 Config.Inventory = "ox" -- qb || qs || ox || mf || codem
-Config.QBInventory = "new" -- true for new version, false for old version.
+Config.QBInventory = "new" -- new for new version, old for old version.
 
 -- if you set this as false and a player opens a vehicle is not owned by anyone, the gunrack will not appear after restart because the plate wont match!
 Config.AllowGunracksForOwnedVehicles = true -- if true, only owned vehicles will have gunracks.
