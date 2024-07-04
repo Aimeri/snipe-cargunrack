@@ -2,7 +2,7 @@
 -----------------For support, scripts, and more----------------
 --------------- https://discord.gg/AeCVP2F8h7  -------------
 ---------------------------------------------------------------
-
+QBCore = exports['qb-core']:GetCoreObject()
 local function DoProgress(cb)
     if Config.Progress == "qb" then
         QBCore.Functions.Progressbar("opening-gunrack", "Opening Gunrack",  5000, false, true, {
@@ -52,7 +52,7 @@ local function OpenGunrack(plate, doProgress)
             	slots = Config.StashSlots,
         	})
 	elseif Config.QBInventory == "new" then
-        	TriggerServerEvent("snipe-cargunrack:server:openGunrack", "gunrack_car_"..plate)
+        	TriggerServerEvent("snipe-cargunrack:server:openGunrack", plate)
 	end
     elseif Config.Inventory == "ox" then
         TriggerServerEvent("snipe-cargunrack:server:registerStash","gunrack_car_"..plate, "ox")
